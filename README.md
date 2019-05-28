@@ -78,6 +78,7 @@ src
   └───services      # All the business logic is here
   └───jobs          # Jobs definitions for agenda.js (coming soon)
   └───subscribers   # Event handlers for async task (coming soon)
+  └───repositories  # Armazing query builders (coming soon)
 └───config          # Environment variables and configuration related stuff
 └───constants       # Are fixed values
 └───database        # For control have of DB version, table creation, and data entry
@@ -86,8 +87,4 @@ src
 
 ## Author
 
-Diego Malta
-
-<https://twitter.com/diomalta>
-
-<https://github.com/diomalta>
+Diego Malta (<https://twitter.com/diomalta> | <https://github.com/diomalta>)
