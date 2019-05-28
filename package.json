@@ -1,0 +1,53 @@
+{
+  "name": "boilerplate-nodejs-expressjs-postgres",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/diomalta/boilerplate-nodejs-expressjs-mongodb.git",
+  "author": "Diego Malta <diohmalta@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore __tests__",
+    "pretest": "cross-env NODE_ENV=test sequelize db:migrate",
+    "test": "cross-env NODE_ENV=test jest --verbose --passWithNoTests",
+    "posttest": "cross-env NODE_ENV=test sequelize db:migrate:undo:all",
+    "lint": "./node_modules/.bin/eslint **/**/**.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && yarn lint"
+    }
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "cross-env": "^5.2.0",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.10.0",
+    "sequelize": "^5.7.6",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "factory-girl": "^5.0.4",
+    "faker": "^4.1.0",
+    "husky": "^2.1.0",
+    "jest": "^24.7.1",
+    "nodemon": "^1.18.11",
+    "prettier": "^1.17.0",
+    "sequelize-cli": "^5.4.0",
+    "sqlite3": "^4.0.6",
+    "supertest": "^4.0.2"
+  }
+}
